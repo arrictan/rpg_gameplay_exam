@@ -19,6 +19,8 @@ public class PlayerMovementController : MonoBehaviour
 		
 		if ( _input == Vector3.zero )
 		{
+			_rigidBody.angularVelocity = Vector3.zero;
+			_rigidBody.velocity = Vector3.zero;
 			return;
 		}
 		
