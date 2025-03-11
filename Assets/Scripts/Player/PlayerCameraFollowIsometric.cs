@@ -23,7 +23,7 @@ public class PlayerCameraFollowIsometric : MonoBehaviour
 		_defaultPosition = currentPos;
 	}
 	
-	private void FixedUpdate()
+	private void Update()
 	{
 		if ( _target == null )
 		{
