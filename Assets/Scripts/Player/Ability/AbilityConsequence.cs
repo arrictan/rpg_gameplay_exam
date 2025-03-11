@@ -75,7 +75,7 @@ public class Consequence : ScriptableObject
                             continue;
                         }
                         
-                        enemy.SetDamage( 0 );
+                        enemy.SetDamage( Stat );
                     }
                 }
 
