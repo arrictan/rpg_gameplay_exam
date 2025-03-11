@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746d5e5c3c75b2c4eb39196730b6f0ae, type: 3}
+  m_Name: SlashAndStomp_Phase1
+  m_EditorClassIdentifier: 
+  Consequences:
+  - {fileID: 11400000, guid: 1cc598b7c7bffe641b466eb7e35e6fa1, type: 2}
+  - {fileID: 11400000, guid: af41900ec88be3e4d81e22cf632ffbd4, type: 2}
+  Duration: 0
