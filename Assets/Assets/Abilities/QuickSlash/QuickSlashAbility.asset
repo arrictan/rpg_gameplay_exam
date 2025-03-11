@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 2
   Cooldown: 0.5
-  KeyCode: 32
+  KeyCode: 50
   AbilityBehaviour: {fileID: 11400000, guid: e29923fcf58607844b289267b5c96909, type: 2}
