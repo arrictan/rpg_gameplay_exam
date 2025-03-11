@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ad213c619672b459d3275557310c5c, type: 3}
   m_Name: SlashAndStompAbiltiyBehaviour
   m_EditorClassIdentifier: 
-  AbilityPhases: []
+  AbilityPhases:
+  - {fileID: 11400000, guid: 51c7747f5bac7224cb60f7d3fcd9eb40, type: 2}
+  - {fileID: 11400000, guid: 0e9c18102b4babb408f84902a28f47e7, type: 2}
