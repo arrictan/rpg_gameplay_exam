@@ -18,9 +18,6 @@ public class AbilityPhase : ScriptableObject
         Consequence effect = Consequences[ _currentIndex ];
         Duration = args.Get<float>("duration" );
         
-        // TODO: remove this one, used for debugging only
-        args.Set( "deltaTime", deltaTime );
-        
         float targetTime = Duration * effect.NormalizedTime;
 
         if ( deltaTime >= targetTime )

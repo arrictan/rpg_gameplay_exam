@@ -64,7 +64,9 @@ public class Ability : ScriptableObject
     {
         if ( AbilityBehaviour == null )
         {
+#if VERBOSE
             Debug.LogWarningFormat( "Ability {0} cannot be activated, ability behaviour is not set.", Id );
+#endif
             return;
         }
 
@@ -75,7 +77,9 @@ public class Ability : ScriptableObject
     {
         if ( AbilityBehaviour == null )
         {
+#if VERBOSE
             Debug.LogWarningFormat( "Ability {0} cannot be activated, ability behaviour is not set.", Id );
+#endif
             return;
         }
 
@@ -86,7 +90,9 @@ public class Ability : ScriptableObject
     {
         if ( AbilityBehaviour == null )
         {
+#if VERBOSE
             Debug.LogWarningFormat( "Ability {0} cannot be activated, ability behaviour is not set.", Id );
+#endif
             return;
         }
 

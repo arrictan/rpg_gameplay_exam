@@ -26,6 +26,7 @@ public class PlayerAbilityController : MonoBehaviour
     {
         if ( _selectedAbility != null )
         {
+            Debug.LogFormat( "PlayerAbilityController: cannot activate ability, ability {0} is active.", _selectedAbility.Id );
             return;
         }
         
