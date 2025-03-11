@@ -51,6 +51,33 @@ public class Consequence : ScriptableObject
                 Debug.LogFormat( "Ability {0} is done applying effect with {1} and targets are {2} on {3}", args.Get<int>( "id"), "Damage", 
                     ( colliders != null ? colliders.Length : 0 ), args.Get<float>("deltaTime") );
 #endif
+                
+                if ( colliders != null && colliders.Length > 0 )
+                {
+                    for ( int i = 0; i < colliders.Length; ++i )
+                    {
+                        if ( colliders[i] == null )
+                        {
+                            continue;
+                        }
+                        
+                        GameObject current = colliders[i].gameObject;
+
+                        if ( current == null )
+                        {
+                            continue;
+                        }
+
+                        Enemy enemy = current.GetComponent<Enemy>();
+
+                        if ( enemy == null )
+                        {
+                            continue;
+                        }
+                        
+                        enemy.SetDamage( 0 );
+                    }
+                }
 
                 break;
         }
