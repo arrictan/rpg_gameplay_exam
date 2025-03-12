@@ -44,6 +44,7 @@ public class PlayerAbilityController : MonoBehaviour
             if ( Input.GetKeyUp( ability.KeyCode ))
             {
                 ActivateAbility( ability, _args );
+                break;
             }
         }
     }
