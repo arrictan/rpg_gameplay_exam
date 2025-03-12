@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class AbilityPhase : ScriptableObject
 {
     public List<Consequence> Consequences;
-    public float Duration;
     private int _currentIndex = 0;
     
     public bool TryApplyEffects( AbilityArgs args, float deltaTime )
@@ -16,9 +15,9 @@ public class AbilityPhase : ScriptableObject
         }
 
         Consequence effect = Consequences[ _currentIndex ];
-        Duration = args.Get<float>("duration" );
+        float duration = args.Get<float>("duration" );
         
-        float targetTime = Duration * effect.NormalizedTime;
+        float targetTime = duration * effect.NormalizedTime;
 
         if ( deltaTime >= targetTime )
         {
