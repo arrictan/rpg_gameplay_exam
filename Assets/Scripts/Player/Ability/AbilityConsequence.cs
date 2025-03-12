@@ -52,31 +52,33 @@ public class Consequence : ScriptableObject
                     ( colliders != null ? colliders.Length : 0 ), args.Get<float>("deltaTime") );
 #endif
                 
-                if ( colliders != null && colliders.Length > 0 )
+                if ( colliders == null || colliders.Length == 0 )
                 {
-                    for ( int i = 0; i < colliders.Length; ++i )
+                    return;
+                }
+                
+                for ( int i = 0; i < colliders.Length; ++i )
+                {
+                    if ( colliders[i] == null )
                     {
-                        if ( colliders[i] == null )
-                        {
-                            continue;
-                        }
-                        
-                        GameObject current = colliders[i].gameObject;
-
-                        if ( current == null )
-                        {
-                            continue;
-                        }
-
-                        Enemy enemy = current.GetComponent<Enemy>();
-
-                        if ( enemy == null )
-                        {
-                            continue;
-                        }
-                        
-                        enemy.SetDamage( Stat );
+                        continue;
                     }
+                        
+                    GameObject current = colliders[i].gameObject;
+
+                    if ( current == null )
+                    {
+                        continue;
+                    }
+
+                    Enemy enemy = current.GetComponent<Enemy>();
+
+                    if ( enemy == null )
+                    {
+                        continue;
+                    }
+                        
+                    enemy.SetDamage( Stat );
                 }
 
                 break;
